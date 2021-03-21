@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Spring batch file upload</title>
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/5.0.0-beta2/css/bootstrap.min.css} "/>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+        <h5 class="navbar-brand">CSV File Upload</h5>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mt-5">
+
+            <div th:if="${message}">
+                <h5 th:text="${message}"/>
+            </div>
+
+            <form method="POST" enctype="multipart/form-data" action="/">
+                <div class="form-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile" name="file">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                </div>
+				<br/>
+                <button class="btn btn-primary" type="submit">Submit file</button>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
