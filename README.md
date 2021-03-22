@@ -18,11 +18,11 @@ Run:
 
 Execute the project:
 - Once serveris started, go to this page to view the UI screen-> http://localhost:8080
-- After page loaded, you can browse to select any CSV file and submit the file
+- After page loaded, select the sample CSV file given and submit it
 - Once batch job finishes it's execution, you can see the success message in UI like this-> Batch job's are executed successfully !!!
 - Then, output of the processed files can be seen in this location-> src/main/resources path in the project directory with the name of 'geographic'
 
 NOTE:
 - Tried with the sample input given and it took around 20m to complete the job as it is around 120MB file
-- Uploading file is limited up to 150MB and can increase it in properties file
+- The project will run successfully for the fixed columns provided in sample file and not implemented for dynamic columns and not done the validations as well (like other formats pdf, txt and so on)
 - The project is designed in such a way that, we can add other format's what we want (For ex: JSON) with minimal code change by just adding the ItemWriter and adding annotations in model class
